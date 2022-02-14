@@ -49,34 +49,35 @@ class Node:
             self.right.print_tree()
         
 
-class HashMap:
-    """Hash Map in Binary Tree"""
+class TreeMap:
+    """Tree Map in Binary Tree"""
     def __init__(self) -> None:
         self.map_tree = Node()
      
     def put_val(self, key_, val_):
         if key_:
-            hash_key = hash(key_)
-            return self.map_tree.insert(hash_key, val_)
+            return self.map_tree.insert(key_, val_)
         return None
 
     def get_val(self, key_):
-        hash_key = hash(key_)
-        return self.map_tree.get(hash_key)
+        return self.map_tree.get(key_)
 
     def print_tree(self):
         self.map_tree.print_tree()
 
 
-hmap = HashMap()
-hmap.print_tree()
-hmap.put_val(1, 'pmp')
-hmap.print_tree()
-hmap.put_val(1, 'pamp')
-hmap.put_val(2, 'ada')
-hmap.put_val(3, 'erde')
-hmap.put_val(4, 'bfff')
-hmap.put_val(5, 'ereee')
-hmap.put_val(6, 'oto')
-hmap.print_tree()
+tmap = TreeMap()
+tmap.print_tree()
+tmap.put_val(1, 'pmp')
+tmap.print_tree()
+tmap.put_val(1, 'pamp')
+tmap.put_val(2, 'ada')
+tmap.put_val(3, 'erde')
+tmap.put_val(4, 'bfff')
+tmap.put_val(5, 'ereee')
+tmap.put_val(6, 'oto')
+tmap.print_tree()
+print('---')
+print(tmap.get_val(1))
+print('----')
 
